@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "nekoclient",
+  "version": "${version}",
+  "name": "Neko Client",
+  "description": "A lightweight performance-focused Minecraft client mod",
+  "authors": ["NekoDev"],
+  "contact": {},
+  "license": "MIT",
+  "icon": "assets/nekoclient/icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "main": ["net.nekoclient.NekoClient"],
+    "client": ["net.nekoclient.NekoClientClient"],
+    "modmenu": ["net.nekoclient.config.ModMenuIntegration"]
+  },
+  "mixins": ["nekoclient.mixins.json"],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric": "*",
+    "minecraft": "${minecraft_version}"
+  },
+  "suggests": {
+    "sodium": "*",
+    "lithium": "*",
+    "modmenu": "*"
+  }
+}
